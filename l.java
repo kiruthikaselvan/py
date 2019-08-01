@@ -4,24 +4,26 @@ import java.Scanner;
 public class substr{
 public static void main(String args[]){
 String str;
-int n,i,temp;
+int co=0,1;
+char a,b;
 Scanner s=new Scanner(System.in);
-str=s.next();
+str=s.nextline();
 n=str.length();
 for(i=0;i<n;i++)
 {
-if(str[i]!=str[n-i-1])
+a=str.charAt(i);
+for(int j=i+1;j<n;j++)
 {
-continue;
-}
-temp=i;
-else
-{
-System.out.println(temp);
-}
+  b=s.charAt(j);
+  if(a==b)
+  {
+    co=co+1;
+  }
 }
 }
-
+System.out.println(co);
+}
+}
 
 
 
